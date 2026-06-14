@@ -146,7 +146,7 @@ public class GUI {
 		pContainer.getChildren().clear(); // Evita duplicar elementos en la memoria visual de JavaFX
 		
 		// Inyección de componentes del bloque de registro superior
-		pContainer.getChildren().addAll(lTitle, lCronometro, lIdP1, tFIdP1, lNameP1, tFNameP1, lNicknameP1, tFNicknameP1);
+		pContainer.getChildren().addAll(lTitle, lIdP1, tFIdP1, lNameP1, tFNameP1, lNicknameP1, tFNicknameP1);
 		pContainer.getChildren().addAll(lIdP2, tFIdP2, lNameP2, tFNameP2, lNicknameP2, tFNicknameP2);
 		pContainer.getChildren().addAll(lNationality, tFNationality, lLevel, cBLevel, bStartGame);
 		
@@ -295,7 +295,7 @@ public class GUI {
 		tAResultLog = new TextArea();
 		tAResultLog.setEditable(false); // Bloquea que el usuario borre los logs de intentos
 		tAResultLog.setPrefSize(760, 110);
-		tAResultLog.setTranslateX(20); tAResultLog.setTranslateY(510);
+		tAResultLog.setTranslateX(20); tAResultLog.setTranslateY(310);
 		tAResultLog.setPromptText("Resultados e historial de intentos aquí...");
 	}
 
@@ -339,7 +339,7 @@ public class GUI {
 	public void drawAvailableFiguresPanel(int totalFiguresAllowed, ArrayList<String> allFigures) {
 		pAvailableFiguresImages.getChildren().clear(); // Limpia los dibujos del juego anterior
 		pAvailableFiguresImages.setPrefSize(760, 50);
-		pAvailableFiguresImages.setTranslateX(20); pAvailableFiguresImages.setTranslateY(455);
+		pAvailableFiguresImages.setTranslateX(20); pAvailableFiguresImages.setTranslateY(440);
 
 		int xOffset = 0; // Controla la separación horizontal de cada imagen con su texto
 		for (int i = 0; i < totalFiguresAllowed; i++) {
@@ -426,7 +426,7 @@ public class GUI {
 		// Registra las columnas, fija el tamaño y añade la tabla al contenedor de la ventana
 		tVMatches.getColumns().addAll(levelCol, winnerCol, durationCol);
 		tVMatches.setPrefSize(760, 110);
-		tVMatches.setTranslateX(20); tVMatches.setTranslateY(310);
+		tVMatches.setTranslateX(20); tVMatches.setTranslateY(510);
 		
 		pContainer.getChildren().add(tVMatches);
 	}
